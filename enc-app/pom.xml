@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.gitkraken</groupId>
+  <artifactId>enc-app</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>enc-app</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <org.bouncycastle.version>1.80</org.bouncycastle.version>
+  </properties>
+
+  <dependencies>
+
+    <!--
+     | The Bouncy Castle Crypto package is a Java implementation of cryptographic algorithms.
+     | This jar contains the JCA/JCE provider and low-level API for the BC Java version 1.80
+     | for Java 8 and later.
+     |-->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk18on</artifactId>
+      <version>${org.bouncycastle.version}</version>
+    </dependency>
+
+    <!--
+     | The Bouncy Castle Java APIs for the OpenPGP Protocol.
+     | The APIs are designed primarily to be used in conjunction with the BC Java provider
+     | but may also be used with other providers providing cryptographic services.
+     |-->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcpg-jdk18on</artifactId>
+      <version>${org.bouncycastle.version}</version>
+    </dependency>
+
+    <!--
+     | The Bouncy Castle Java APIs for ASN.1 extension and utility APIs used to support bcpkix and bctls.
+     |-->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcutil-jdk18on</artifactId>
+      <version>${org.bouncycastle.version}</version>
+    </dependency>
+
+  </dependencies>
+</project>
