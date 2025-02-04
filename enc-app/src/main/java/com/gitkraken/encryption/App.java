@@ -51,6 +51,7 @@ public class App {
                     .setProvider(BouncyCastleProvider.PROVIDER_NAME)
                     .setSecureRandom(new SecureRandom())
                     .setWithIntegrityPacket(true);
+
             PGPEncryptedDataGenerator encGen = new PGPEncryptedDataGenerator(dataEncBuilder);
             encGen.addMethod(new JcePublicKeyKeyEncryptionMethodGenerator(publicKey)
                     .setProvider(BouncyCastleProvider.PROVIDER_NAME));
